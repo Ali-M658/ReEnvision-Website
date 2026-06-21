@@ -98,7 +98,7 @@ h2 { font-size: 2.4rem; margin-bottom: 16px; }
 h3 { font-size: 1.75rem; margin-bottom: 12px; }
 
 /* ==========================================================================
-   4. NAVIGATION BAR (FIXING LOGO CONTRAST)
+   4. NAVIGATION BAR (FIXING LOGO CONTRAST & MAKING IT BIGGER)
    ========================================================================== */
 .nav {
   position: sticky;
@@ -106,7 +106,7 @@ h3 { font-size: 1.75rem; margin-bottom: 12px; }
   z-index: 1000;
   background: var(--light-bg); /* Use ice-blue backdrop to support blue logo variants */
   border-bottom: 1px solid var(--border);
-  padding: 16px 0;
+  padding: 12px 0;
 }
 
 .nav-inner {
@@ -121,8 +121,8 @@ h3 { font-size: 1.75rem; margin-bottom: 12px; }
 }
 
 .logo-img {
-  height: 42px;
-  width: auto;
+  height: 60px;               /* Change 1: Expanded from 42px to make the logo prominent */
+  width: auto;                /* Retains original asset aspect ratio scale */
   display: block;
   object-fit: contain;
 }
@@ -283,4 +283,23 @@ h3 { font-size: 1.75rem; margin-bottom: 12px; }
   display: flex;
   justify-content: space-between;
   font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   7. CONTACT HERO CONTRAST FIXES (OVERRIDING TIMELINE PROSE BLOCKS)
+   ========================================================================== */
+/* Change 2: Targets the dark hero block wrapper to pull clean text separation */
+.page-hero-inner .eyebrow {
+  color: #F0F8FF !important;       /* Re-adjusts small label text to brand ice-blue */
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.page-hero-inner h1 {
+  color: #ffffff !important;        /* Forces titles to 100% white against gradients */
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.page-hero-inner p {
+  color: rgba(255, 255, 255, 0.88) !important; /* Forces supporting text elements readable */
 }
