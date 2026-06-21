@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events — ReEnvision</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--mid-blue) 100%);
+      padding: 88px 0 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(74,159,212,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .no-results {
+      text-align: center;
+      padding: 64px 0;
+      color: var(--text-light);
+      display: none;
+    }
+    .no-results p { color: var(--text-light); font-size: 1rem; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html">Re<span>Envision</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mission.html">Mission</a>
+      <a href="team.html">Team</a>
+      <a href="events.html" class="active">Events</a>
+      <a href="impact.html">Impact</a>
+      <a href="contact.html" class="nav-cta">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="eyebrow">Workshops, Webinars &amp; More</div>
+    <h1>Upcoming Events</h1>
+    <p>Search our calendar of free AI education events — open to all skill levels and backgrounds.</p>
+  </div>
+</section>
+
+<!-- ── Events Section ── -->
+<section class="section">
+  <div class="container">
+
+    <!-- Search Bar -->
+    <div class="events-search">
+      <div class="search-row">
+        <input type="text" class="search-input" id="searchTitle" placeholder="🔍 Search by title..." oninput="filterEvents()" />
+        <input type="text" class="search-input" id="searchDesc" placeholder="Search by description..." oninput="filterEvents()" />
+        <select class="search-select" id="searchCategory" onchange="filterEvents()">
+          <option value="">All Categories</option>
+          <option value="workshop">Workshop</option>
+          <option value="webinar">Webinar</option>
+          <option value="community">Community</option>
+          <option value="masterclass">Masterclass</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Results count -->
+    <p id="resultsCount" style="margin-bottom:24px;color:var(--text-light);font-size:0.88rem;"></p>
+
+    <!-- Event Grid -->
+    <div class="event-grid" id="eventGrid">
+
+      <div class="event-card" data-title="Intro to AI: No Experience Needed" data-desc="A beginner-friendly workshop that walks you through what AI actually is, how it works, and how you can start using it today. No coding required." data-category="workshop">
+        <div class="event-img">🤖</div>
+        <div class="event-body">
+          <span class="event-tag">Workshop</span>
+          <h3>Intro to AI: No Experience Needed</h3>
+          <p>A beginner-friendly workshop that walks you through what AI actually is, how it works, and how you can start using it today. No coding required.</p>
+          <div class="event-meta">
+            <span>📅 January 18, 2025</span>
+            <span>🕓 2:00 PM CST</span>
+            <span>💻 Online</span>
+          </div>
+          <a href="events/intro-to-ai.html" class="btn btn-primary" style="margin-top:16px;width:100%;justify-content:center">Learn More &amp; Register</a>
+        </div>
+      </div>
+
+      <div class="event-card" data-title="AI Ethics: Who Decides What's Fair?" data-desc="A guided discussion and interactive session exploring the real-world implications of AI bias, fairness, and accountability. Open to all." data-category="webinar">
+        <div class="event-img">⚖️</div>
+        <div class="event-body">
+          <span class="event-tag">Webinar</span>
+          <h3>AI Ethics: Who Decides What's Fair?</h3>
+          <p>A guided discussion and interactive session exploring the real-world implications of AI bias, fairness, and accountability. Open to all.</p>
+          <div class="event-meta">
+            <span>📅 February 5, 2025</span>
+            <span>🕓 6:00 PM CST</span>
+            <span>💻 Online</span>
+          </div>
+          <a href="events/intro-to-ai.html" class="btn btn-primary" style="margin-top:16px;width:100%;justify-content:center">Learn More &amp; Register</a>
+        </div>
+      </div>
+
+      <div class="event-card" data-title="Build Your First AI Project" data-desc="A hands-on workshop where you'll build a simple AI-powered app from scratch using free tools. Bring your laptop and a problem you want to solve." data-category="workshop">
+        <div class="event-img">🛠️</div>
+        <div class="event-body">
+          <span class="event-tag">Workshop</span>
+          <h3>Build Your First AI Project</h3>
+          <p>A hands-on workshop where you'll build a simple AI-powered app from scratch using free tools. Bring your laptop and a problem you want to solve.</p>
+          <div class="event-meta">
+            <span>📅 February 22, 2025</span>
+            <span>🕓 10:00 AM CST</span>
+            <span>📍 Houston, TX</span>
+          </div>
+          <a href="events/intro-to-ai.html" class="btn btn-primary" style="margin-top:16px;width:100%;justify-content:center">Learn More &amp; Register</a>
+        </div>
+      </div>
+
+      <div class="event-card" data-title="Community Meetup: Learners &amp; Leaders" data-desc="A casual in-person gathering for ReEnvision learners, volunteers, and community members to connect, share stories, and plan what's next." data-category="community">
+        <div class="event-img">🤝</div>
+        <div class="event-body">
+          <span class="event-tag">Community</span>
+          <h3>Community Meetup: Learners &amp; Leaders</h3>
+          <p>A casual in-person gathering for ReEnvision learners, volunteers, and community members to connect, share stories, and plan what's next.</p>
+          <div class="event-meta">
+            <span>📅 March 8, 2025</span>
+            <span>🕓 3:00 PM CST</span>
+            <span>📍 Houston, TX</span>
+          </div>
+          <a href="events/intro-to-ai.html" class="btn btn-primary" style="margin-top:16px;width:100%;justify-content:center">Learn More &amp; Register</a>
+        </div>
+      </div>
+
+      <div class="event-card" data-title="AI in the Real World: Career Applications" data-desc="A masterclass panel featuring professionals from healthcare, education, and business who use AI daily — and how you can too." data-category="masterclass">
+        <div class="event-img">💼</div>
+        <div class="event-body">
+          <span class="event-tag">Masterclass</span>
+          <h3>AI in the Real World: Career Applications</h3>
+          <p>A masterclass panel featuring professionals from healthcare, education, and business who use AI daily — and how you can too.</p>
+          <div class="event-meta">
+            <span>📅 March 20, 2025</span>
+            <span>🕓 5:00 PM CST</span>
+            <span>💻 Online</span>
+          </div>
+          <a href="events/intro-to-ai.html" class="btn btn-primary" style="margin-top:16px;width:100%;justify-content:center">Learn More &amp; Register</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- No results message -->
+    <div class="no-results" id="noResults">
+      <p style="font-size:2rem;margin-bottom:12px">🔎</p>
+      <h3 style="color:var(--text-mid)">No events found</h3>
+      <p>Try a different search term or category.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Re<span>Envision</span></div>
+        <p>Leveraging artificial intelligence to empower individuals and bridge the digital divide.</p>
+      </div>
+      <div class="footer-col"><h5>Organization</h5><a href="mission.html">Mission</a><a href="team.html">Team</a><a href="impact.html">Impact</a></div>
+      <div class="footer-col"><h5>Programs</h5><a href="events.html">Events</a></div>
+      <div class="footer-col"><h5>Connect</h5><a href="contact.html">Contact Us</a><a href="contact.html">Volunteer</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 ReEnvision. All rights reserved.</span>
+      <span>Founded 2024 · Making AI accessible for all</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function filterEvents() {
+  const titleQ = document.getElementById('searchTitle').value.toLowerCase();
+  const descQ  = document.getElementById('searchDesc').value.toLowerCase();
+  const catQ   = document.getElementById('searchCategory').value.toLowerCase();
+
+  const cards = document.querySelectorAll('.event-card');
+  let visible = 0;
+
+  cards.forEach(card => {
+    const title = card.dataset.title.toLowerCase();
+    const desc  = card.dataset.desc.toLowerCase();
+    const cat   = card.dataset.category.toLowerCase();
+
+    const match =
+      (!titleQ || title.includes(titleQ)) &&
+      (!descQ  || desc.includes(descQ))   &&
+      (!catQ   || cat === catQ);
+
+    card.style.display = match ? '' : 'none';
+    if (match) visible++;
+  });
+
+  const countEl = document.getElementById('resultsCount');
+  countEl.textContent = visible === cards.length
+    ? `Showing all ${visible} events`
+    : `Showing ${visible} of ${cards.length} events`;
+
+  document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+}
+
+// Init count
+filterEvents();
+</script>
+</body>
+</html>

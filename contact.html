@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — ReEnvision</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--mid-blue) 100%);
+      padding: 88px 0 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(74,159,212,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-hero-inner { position: relative; z-index: 1; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 56px;
+    }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html">Re<span>Envision</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mission.html">Mission</a>
+      <a href="team.html">Team</a>
+      <a href="events.html">Events</a>
+      <a href="impact.html">Impact</a>
+      <a href="contact.html" class="nav-cta active">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="eyebrow">We'd Love to Hear From You</div>
+    <h1>Contact Us</h1>
+    <p>Whether you're a student, educator, potential partner, or just curious — there's always someone here ready to connect.</p>
+  </div>
+</section>
+
+<!-- ── Contact Cards ── -->
+<section class="section">
+  <div class="container">
+    <div class="text-center">
+      <div class="eyebrow">How to Reach Us</div>
+      <h2>Get in touch with the right team</h2>
+      <div class="divider"></div>
+      <p style="max-width:540px;margin:0 auto;color:var(--text-mid);">We've organized our contacts by purpose so you reach the right person from the start.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- General Inquiries -->
+      <div class="contact-card">
+        <h3>General Inquiries</h3>
+        <p>Questions about who we are, what we do, or how to get started? Start here.</p>
+        <ul class="contact-list">
+          <li>
+            <div class="contact-icon">📧</div>
+            <div><strong>Email</strong>hello@reenvision.org</div>
+          </li>
+          <li>
+            <div class="contact-icon">📞</div>
+            <div><strong>Phone</strong>+1 (713) 555-0101</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Volunteer & Community -->
+      <div class="contact-card">
+        <h3>Volunteer &amp; Community</h3>
+        <p>Interested in joining our contributor network or facilitating a workshop in your area?</p>
+        <ul class="contact-list">
+          <li>
+            <div class="contact-icon">📧</div>
+            <div><strong>Email</strong>volunteer@reenvision.org</div>
+          </li>
+          <li>
+            <div class="contact-icon">📞</div>
+            <div><strong>Phone</strong>+1 (713) 555-0182</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Partnerships -->
+      <div class="contact-card">
+        <h3>Partnerships &amp; Collaborations</h3>
+        <p>Representing a school, club, or nonprofit? We'd love to explore how we can work together.</p>
+        <ul class="contact-list">
+          <li>
+            <div class="contact-icon">📧</div>
+            <div><strong>Email</strong>partners@reenvision.org</div>
+          </li>
+          <li>
+            <div class="contact-icon">📧</div>
+            <div><strong>Email (Alt)</strong>outreach@reenvision.org</div>
+          </li>
+          <li>
+            <div class="contact-icon">📞</div>
+            <div><strong>Phone</strong>+1 (713) 555-0247</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Press & Media -->
+      <div class="contact-card">
+        <h3>Press &amp; Media</h3>
+        <p>Writing about AI education or digital equity? Our communications team is happy to assist.</p>
+        <ul class="contact-list">
+          <li>
+            <div class="contact-icon">📧</div>
+            <div><strong>Email</strong>press@reenvision.org</div>
+          </li>
+          <li>
+            <div class="contact-icon">📞</div>
+            <div><strong>Phone</strong>+1 (713) 555-0319</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Education Programs -->
+      <div class="contact-card">
+        <h3>Education Programs</h3>
+        <p>Looking to bring ReEnvision's curriculum into your classroom or after-school program?</p>
+        <ul class="contact-list">
+          <li>
+            <div class="contact-icon">📧</div>
+            <div><strong>Email</strong>education@reenvision.org</div>
+          </li>
+          <li>
+            <div class="contact-icon">📧</div>
+            <div><strong>Email (Alt)</strong>curriculum@reenvision.org</div>
+          </li>
+          <li>
+            <div class="contact-icon">📞</div>
+            <div><strong>Phone</strong>+1 (713) 555-0458</div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tech & Support -->
+      <div class="contact-card">
+        <h3>Tech &amp; Platform Support</h3>
+        <p>Having trouble accessing our resources or platforms? Our tech team is here to help.</p>
+        <ul class="contact-list">
+          <li>
+            <div class="contact-icon">📧</div>
+            <div><strong>Email</strong>support@reenvision.org</div>
+          </li>
+          <li>
+            <div class="contact-icon">📞</div>
+            <div><strong>Phone</strong>+1 (713) 555-0533</div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Re<span>Envision</span></div>
+        <p>Leveraging artificial intelligence to empower individuals and bridge the digital divide.</p>
+      </div>
+      <div class="footer-col"><h5>Organization</h5><a href="mission.html">Mission</a><a href="team.html">Team</a><a href="impact.html">Impact</a></div>
+      <div class="footer-col"><h5>Programs</h5><a href="events.html">Events</a></div>
+      <div class="footer-col"><h5>Connect</h5><a href="contact.html">Contact Us</a><a href="contact.html">Volunteer</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 ReEnvision. All rights reserved.</span>
+      <span>Founded 2024 · Making AI accessible for all</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team — ReEnvision</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--mid-blue) 100%);
+      padding: 88px 0 72px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(74,159,212,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .join-strip {
+      background: linear-gradient(135deg, var(--navy), var(--mid-blue));
+      padding: 80px 0;
+      text-align: center;
+    }
+    .join-strip h2   { color: var(--white); margin-bottom: 12px; }
+    .join-strip p    { color: rgba(255,255,255,0.72); max-width:480px; margin:0 auto 32px; }
+    .join-strip .eyebrow { color: var(--baby-blue); }
+    .join-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="nav-logo" href="index.html">Re<span>Envision</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="this.nextElementSibling.classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="mission.html">Mission</a>
+      <a href="team.html" class="active">Team</a>
+      <a href="events.html">Events</a>
+      <a href="impact.html">Impact</a>
+      <a href="contact.html" class="nav-cta">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Page Hero ── -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="eyebrow">The People Behind the Mission</div>
+    <h1>Meet Our Team</h1>
+    <p>A passionate, diverse group of professionals, educators, and volunteers united by one goal — making AI education truly accessible.</p>
+  </div>
+</section>
+
+<!-- ── Team Grid ── -->
+<section class="section">
+  <div class="container">
+    <div class="text-center">
+      <div class="eyebrow">Our Members</div>
+      <h2>A Passionate and Diverse Team</h2>
+      <div class="divider"></div>
+      <p style="max-width:600px;margin:0 auto;color:var(--text-mid);">Founded in 2024, ReEnvision has grown from a handful of students into a thriving community of educators, technologists, and change-makers. This diversity of backgrounds is our greatest strength.</p>
+    </div>
+
+    <div class="team-grid" style="margin-top:56px">
+
+      <div class="team-card">
+        <div class="team-avatar">AJ</div>
+        <h4>Alex Johnson</h4>
+        <div class="role">Executive Director</div>
+        <p>Former ML engineer turned nonprofit founder. Alex leads ReEnvision's strategy and partnerships with 8 years in edtech.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">MR</div>
+        <h4>Maya Rodriguez</h4>
+        <div class="role">Director of Education</div>
+        <p>Curriculum designer and former high school STEM teacher passionate about making complex ideas approachable for all learners.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">DK</div>
+        <h4>Daniel Kim</h4>
+        <div class="role">Head of Technology</div>
+        <p>Full-stack developer and AI researcher. Daniel builds and maintains the tools and platforms that power our programs.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">SP</div>
+        <h4>Sofia Patel</h4>
+        <div class="role">Community Manager</div>
+        <p>Community builder with a background in social work. Sofia ensures every learner feels welcome and supported from day one.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">JW</div>
+        <h4>James Williams</h4>
+        <div class="role">Partnerships Lead</div>
+        <p>Experienced in nonprofit development, James grows our network of partner organizations and secures funding for new programs.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">LC</div>
+        <h4>Lisa Chen</h4>
+        <div class="role">Ethics Advisor</div>
+        <p>AI ethics researcher and policy expert. Lisa ensures every program we develop upholds standards of fairness and accountability.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">OM</div>
+        <h4>Omar Mansour</h4>
+        <div class="role">Curriculum Developer</div>
+        <p>Former university lecturer turned instructional designer, specializing in making foundational AI concepts tangible and fun.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">PN</div>
+        <h4>Priya Nair</h4>
+        <div class="role">Volunteer Coordinator</div>
+        <p>Organizes and supports 150+ active volunteers across our programs, making sure no contributor ever feels alone in the mission.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">TL</div>
+        <h4>Tyler Lee</h4>
+        <div class="role">Marketing &amp; Outreach</div>
+        <p>Digital strategist and storyteller. Tyler amplifies ReEnvision's work and ensures it reaches the students who need it most.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">RG</div>
+        <h4>Rachel Green</h4>
+        <div class="role">Program Coordinator</div>
+        <p>Operations expert who keeps our events, workshops, and partnerships running smoothly from planning through to delivery.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Join Strip ── -->
+<section class="join-strip">
+  <div class="container">
+    <div class="eyebrow">Join Us</div>
+    <h2>Become part of the team</h2>
+    <p>We're always looking for dedicated volunteers, educators, and technologists who share our vision. No experience with AI required — just passion.</p>
+    <div class="join-btns">
+      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+      <a href="mission.html" class="btn btn-outline">Read Our Mission</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Re<span>Envision</span></div>
+        <p>Leveraging artificial intelligence to empower individuals and bridge the digital divide.</p>
+      </div>
+      <div class="footer-col"><h5>Organization</h5><a href="mission.html">Mission</a><a href="team.html">Team</a><a href="impact.html">Impact</a></div>
+      <div class="footer-col"><h5>Programs</h5><a href="events.html">Events</a></div>
+      <div class="footer-col"><h5>Connect</h5><a href="contact.html">Contact Us</a><a href="contact.html">Volunteer</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2024 ReEnvision. All rights reserved.</span>
+      <span>Founded 2024 · Making AI accessible for all</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
