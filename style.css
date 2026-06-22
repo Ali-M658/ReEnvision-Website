@@ -153,6 +153,13 @@ h3 { font-size: 1.75rem; margin-bottom: 12px; }
   font-weight: 600;
 }
 
+.nav-links .nav-cta:hover,
+.nav-links .nav-cta:focus,
+.nav-links .nav-cta:visited,
+.nav-links .nav-cta.active {
+  color: var(--white);
+}
+
 .nav-links .nav-cta:hover {
   background: var(--mid-blue);
 }
