@@ -165,6 +165,11 @@
     }
     .hub-link:hover { gap: 10px; }
 
+  Also update the CSS under your `/* ── Mission Strip ── */` section so the image stays responsive on mobile.
+
+Replace that block of styles with this code:
+
+```css
     /* ── Mission Strip ── */
     .mission-strip {
       background: linear-gradient(135deg, var(--navy), var(--mid-blue));
@@ -209,9 +214,12 @@
 
     /* ── Responsive ── */
     @media (max-width: 768px) {
-      .mission-strip-inner { grid-template-columns: 1fr; gap: 32px; }
+      .mission-strip-inner { grid-template-columns: 1fr; gap: 40px; }
+      .mission-strip-inner div img { min-height: 260px !important; }
       .hero { min-height: auto; padding: 80px 0 60px; }
     }
+
+```
   </style>
 </head>
 <body>
